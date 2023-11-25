@@ -2,26 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* #FDFDFC */
+    --background: 60, 20%, 99%;
+
+    /* #5C5280 */
+    --primary: 253, 22%, 41%;
+
+    /* #D9C4D4 */
+    --secondary: 314, 22%, 81%;
+
+    /* #5C5280 */
+    --accent: 253, 22%, 41%;
+
+    /* #060604 */
+    --text: 60, 20%, 2%;
+
+    --destructive: 0 100% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* #030302 */
+    --background: 60, 20%, 1%;
+
+    /*#897FAD*/
+    --primary: 253, 22%, 59%;
+
+    /* #3B2636*/
+    --secondary: 314, 22%, 19%;
+
+    /* #897FAD */
+    --accent: 253, 22%, 59%;
+
+    /* #FBFBF9 */
+    --text: 60, 20%, 98%;
+
+    --destructive: 0 100% 50%;
+
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  body {
+    @apply bg-background;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
 }

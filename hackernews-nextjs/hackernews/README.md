@@ -34,3 +34,71 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Color Pallet for my website
+
+[RealTimeColors](https://www.realtimecolors.com/)
+
+```bash
+npm i tailwind-merge
+
+```
+
+```bash
+npm i @ianvs/prettier-plugin-sort-imports
+```
+
+```bash
+npm i react-error-boundary
+
+```
+
+```bash
+npm i class-variance-authority
+```
+
+```bash
+npm i eslint-plugin-react-hooks
+```
+
+```bash
+npm i eslint-plugin-tailwindcss
+```
+
+```bash
+npm i tailwindcss-animate
+```
+
+```bash
+npm i clsx
+```
+
+```bash
+npm i lucide-react
+```
+
+```bash
+npm i next-themes
+```
+
+```bash
+npm install -D @tailwindcss/typography
+
+```
+
+## Radix ui
+
+```bash
+npm install @radix-ui/react-slot
+```
+
+```bash
+npm install @radix-ui/react-toast
+
+```
+
+## shadcnui
+
+## CHANGE THE APP-NAME IN THE FILE NAME [site.ts](config/site.ts)
+
+## CHANGE THE APP-NAME IN THE FILE NAME [pakcage.json](./package.json)
