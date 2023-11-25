@@ -1,20 +1,36 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "hackernews",
-  description: "Website Designed for storing and managing the files and ides",
+  name: "Hacker News",
+  description: "Website Designed for Hacker News",
   mainNav: [
     {
-      title: "Home",
-      href: "/",
+      title: "new",
+      href: "/new",
     },
     {
-      title: "Services",
-      href: "/services",
+      title: "past",
+      href: "/past",
     },
     {
-      title: "Contact",
-      href: "/contact",
+      title: "comments",
+      href: "/comments",
+    },
+    {
+      title: "ask",
+      href: "/ask",
+    },
+    {
+      title: "show",
+      href: "/show",
+    },
+    {
+      title: "jobs",
+      href: "/jobs",
+    },
+    {
+      title: "submit",
+      href: "/submit",
     },
   ],
   links: {

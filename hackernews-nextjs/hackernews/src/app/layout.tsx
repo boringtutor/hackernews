@@ -1,12 +1,15 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { fontMono, fontSans } from "../../lib/fonts"
-import { cn } from "../../lib/utils"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+
+import "./globals.css"
+
+import { ErrorBoundary } from "react-error-boundary"
+
+import { SiteHeader } from "../../components/site-header"
 import { ThemeProvider } from "../../components/theme-provider"
 import { siteConfig } from "../../config/site"
-import { SiteHeader } from "../../components/site-header"
-
+import { fontMono, fontSans } from "../../lib/fonts"
+import { cn } from "../../lib/utils"
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +24,8 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 export default function RootLayout({ children }: RootLayoutProps) {
+  //NOTE:testing the global-error.tsx
+  // throw new Error("testing....")
   return (
     <>
       <html lang="en" suppressHydrationWarning>
@@ -35,6 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <SiteHeader />
               <div className="flex-1">{children}</div>
             </div>
+
             {/* <TailwindIndicator /> */}
           </ThemeProvider>
         </body>

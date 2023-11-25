@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss"
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config: Config = {
@@ -63,12 +64,12 @@ const config: Config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {
