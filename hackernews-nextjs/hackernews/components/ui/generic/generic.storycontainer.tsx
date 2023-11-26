@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import axios from "axios"
 
+import { STORY_TYPE } from "../../../lib/ const"
+
 type storyType = {
   by: string
   descendants: number
@@ -24,7 +26,7 @@ type g_story_type = {
 export default function GenericStoryContainer(props: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   id: number
-  storyType: string
+  story_type: string
 }) {
   async function fetchStory() {
     return await axios(
@@ -68,10 +70,11 @@ export default function GenericStoryContainer(props: {
               </div>
               {
                 // TODO:convert the empty fragment to link so we can go to discuss page to start new discussion
-                props.storyType === "new" ? (
-                  <div className="text-text">
-                    | hide |{" "}
-                    <div className="text-lg text-text hover:italic">
+
+                props.story_type === STORY_TYPE.new ? (
+                  <div className="flex flex-row text-text">
+                    | hide |
+                    <div className="text-lg text-text hover:cursor-pointer hover:italic">
                       Discuss
                     </div>
                   </div>

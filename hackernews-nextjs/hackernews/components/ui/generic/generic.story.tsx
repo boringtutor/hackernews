@@ -9,7 +9,10 @@ async function getNewStories(url: string) {
   return await axios.get(url)
 }
 
-export default function Story(props: { url: string; storytype: string }) {
+export default function GenericStory(props: {
+  url: string
+  storytype: string
+}) {
   function NewStories() {
     const [newStoriesState, setNewStoriesState] = useState<number[] | null>(
       null
@@ -36,7 +39,7 @@ export default function Story(props: { url: string; storytype: string }) {
               <div key={res}>
                 <GenericStoryContainer
                   id={res}
-                  storyType={props.storytype}
+                  story_type={props.storytype}
                 ></GenericStoryContainer>
               </div>
             )
