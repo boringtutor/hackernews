@@ -30,7 +30,8 @@ export default function GenericStoryContainer(props: {
 }) {
   async function fetchStory() {
     return await axios(
-      `https://hacker-news.firebaseio.com/v0/item/${props.id}.json?print=pretty`
+      // `https://hacker-news.firebaseio.com/v0/item/${props.id}.json?print=pretty`
+      `api/getstory?id=${props.id}`
     )
   }
 

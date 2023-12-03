@@ -1,12 +1,10 @@
-import { NextResponse, type NextRequest } from "next/server"
+import { NextResponse } from "next/server"
 
-export async function GET(request: NextRequest) {
+import { BEST_STORY_URL } from "../../../../lib/ const"
+
+export async function GET() {
   try {
-    const { searchParams } = new URL(request.url)
-    const id = searchParams.get("id")
-    const res = await fetch(
-      ` https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`
-    )
+    const res = await fetch(BEST_STORY_URL)
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const news = await res.json()
 

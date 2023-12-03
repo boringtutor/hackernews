@@ -21,7 +21,7 @@ export default function GenericStory(props: {
       getNewStories(props.url)
         .then((res) => {
           // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-          setNewStoriesState(res.data.slice(0, 10))
+          setNewStoriesState(res.data.slice(0, 20))
           console.log(res)
         })
         .catch((err) => {

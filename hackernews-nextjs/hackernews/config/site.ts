@@ -9,8 +9,8 @@ export const siteConfig = {
       href: "/new",
     },
     {
-      title: "past",
-      href: "/past",
+      title: "best",
+      href: "/best",
     },
     {
       title: "comments",
